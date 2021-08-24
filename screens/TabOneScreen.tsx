@@ -1,33 +1,53 @@
-import * as React from 'react';
-import { StyleSheet } from 'react-native';
+import * as React from "react";
+import { Image } from "react-native";
+import { Text, StyleSheet, View } from "react-native";
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
-
-export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
+export default function TabOneScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <Image
+        source={{
+          uri: "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png",
+        }}
+        style={styles.image}
+      />
+      <View style={styles.rightContainer}>
+        <View style={styles.row}>
+          <Text style={styles.name}>Elon Musk</Text>
+          <Text style={styles.text}>11:11 AM</Text>
+        </View>
+        <Text numberOfLines={1} style={styles.text}>Hola Hola grow radically mehn</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: "row",
+    padding: 10,
+    
+  },
+  image: {
+    height: 50,
+    width: 50,
+    borderRadius: 30,
+    marginRight: 10,
+  },
+  name: {
+    fontWeight: "bold",
+    fontSize: 18,
+    marginBottom: 3,
+  },
+  rightContainer: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  row: {
+    flexDirection: "row",
+    justifyContent: 'space-between',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  text: {
+    color: "grey",
   },
 });
