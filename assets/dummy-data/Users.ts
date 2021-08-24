@@ -1,6 +1,6 @@
 export default [{
   id: 'u1',
-  name: 'Vadim',
+  name: 'Godfrey',
   imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
   status: "Hello there, how are you"
 }, {
