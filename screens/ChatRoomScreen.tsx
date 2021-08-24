@@ -10,6 +10,7 @@ export default function ChatRoomScreen() {
       <FlatList
         data={chatRoomsData.messages}
         renderItem={({item})=><Message message={item} />}
+        inverted
       />
     </View>
   );
