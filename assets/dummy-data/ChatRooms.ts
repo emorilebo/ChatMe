@@ -2,7 +2,7 @@ export default [{
   id: '1',
   users: [{
     id: 'u1',
-    name: 'Vadim',
+    name: 'Godfrey',
     imageUri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg',
   }, {
     id: 'u2',
@@ -13,7 +13,8 @@ export default [{
     id: 'm1',
     content: 'btw, SpaceX is interested in buying notJust.dev!',
     createdAt: '2020-10-03T14:48:00.000Z',
-  }
+  },
+  newMessages: 4 
 }, {
   id: '2',
   users: [{
